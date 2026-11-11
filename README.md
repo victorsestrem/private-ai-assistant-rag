@@ -1,4 +1,4 @@
-# Private AI Assistant with RAG — Case Study
+# Private AI Assistant with RAG: Case Study
 
 > Internal AI assistant I built for **Vale Verde Festas**: runs on the company's own server, answers the whole team through the browser, and grounds every answer in the company's knowledge base.
 > **Source code is private.** This repository documents the project; a live walkthrough is available on request.
@@ -13,10 +13,10 @@
 
 ## Goals
 
-1. **Zero AI API cost** — local open-source models plus free-tier cloud models.
+1. **Zero AI API cost**: local open-source models plus free-tier cloud models.
 2. **Every answer follows the company's official knowledge base**, whichever model produced it.
-3. **Knowledge stays up to date automatically** — the server syncs the knowledge repository from GitHub on a schedule.
-4. **Secure access** — login for the team, no server exposed to the internet (Cloudflare Tunnel only).
+3. **Knowledge stays up to date automatically**: the server syncs the knowledge repository from GitHub on a schedule.
+4. **Secure access**: login for the team, no server exposed to the internet (Cloudflare Tunnel only).
 
 ## How it works
 
@@ -35,7 +35,7 @@ flowchart LR
 
 - **RAG pipeline**: the knowledge base is split into chunks, embedded **locally** (`@huggingface/transformers`, no API cost) and searched semantically for each question.
 - **Model router**: free cloud models answer first, the on-premise model is the fallback; the order is configurable from the UI.
-- **Runs as a Windows service** on the company server (Xeon, 32 GB RAM, no GPU) — model choice was sized to that hardware.
+- **Runs as a Windows service** on the company server (Xeon, 32 GB RAM, no GPU), and the model choice was sized to that hardware.
 - **Auth** with Argon2-hashed passwords and session cookies; Zod validation throughout.
 - Roadmap: file features (review documents, generate documents and spreadsheets).
 
