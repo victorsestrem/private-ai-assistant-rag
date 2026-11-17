@@ -3,6 +3,8 @@
 > Internal AI assistant I built for **Vale Verde Festas**: runs on the company's own server, answers the whole team through the browser, and grounds every answer in the company's knowledge base.
 > **Source code is private.** This repository documents the project; a live walkthrough is available on request.
 
+**Status:** in development.
+
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
 ![NestJS](https://img.shields.io/badge/NestJS_11-E0234E?logo=nestjs&logoColor=white)
 ![Next.js](https://img.shields.io/badge/Next.js_15-000?logo=nextdotjs)
